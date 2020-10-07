@@ -27,5 +27,34 @@ namespace ProyectButton
             MessageBox.Show("Cancel.\n    Okey");
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            const string mensaje ="Desea continuar?";
+            const string confirm = "confirmado";
+            DialogResult result = MessageBox.Show(mensaje, confirm,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            // Si el boton presionado es NO
+            if (result == DialogResult.No)
+            {
+                // cancelar
+                MessageBox.Show("Cancelando");
+
+            }
+            //Si es Yes
+            if (result == DialogResult.Yes)
+            {
+                // Continuar
+                MessageBox.Show("Continuando");
+
+            }
+            /*
+            Form1.Hide();
+
+            Form2.Show();*/
+
+        }
     }
 }
